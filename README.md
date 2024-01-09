@@ -40,11 +40,23 @@ and completing business tasks (injects) that will be provided throughout the com
 
 Every year the vaulue of the scoring and scoring criteria changes though. So be prepeared for that. 
 
+## Rules 
+
+Rules can be found at https://nationalccdc.org/index.php/competition/competitors/rules 
+
 ## Enviorment Overview 
 
 Each team usually gets 8 Jump boxes. With 4 being Windows and 4 being Linux based or other. These boxes are usually out of scope and are used to access the cloud based competition infastucture. 
 
 **Example competition enviorment from MACCDC 2023 Regionals team packet**
+
+
+![image](https://github.com/Artickatz/MACCDC_Practice_Guide/assets/69086568/7ea2cd2f-57d4-44b4-800a-0aed55f6cfa8)
+
+
+![image](https://github.com/Artickatz/MACCDC_Practice_Guide/assets/69086568/bb00937c-79fb-488c-8ffe-71fe0d77eadd)
+
+
 | Network Segment | Hostname    | IP Address     | Operating System           |
 |------------------|-------------|----------------|----------------------------|
 | cloud            | dropbox     | 10.250.20X.13  | Ubuntu 18.04               |
@@ -93,3 +105,80 @@ Each team usually gets 8 Jump boxes. With 4 being Windows and 4 being Linux base
 | hq               | camera      | 172.2X.0.251   | VStarcam C7824WIP           |
 | hq               | call        | 172.2X.0.252   | Cisco 7900 VOIP             |
 | hq               | hqfw        | 172.2X.0.254   | (virtual) Cisco Firepower   |
+
+
+## SSH
+
+SSH - Secure Shell
+A connection to the server will be made with a specified user, and commands will be executed
+as that user. The output of the commands and the ability to connect will be scored.
+
+## HTTP 
+
+HTTP - Hypertext Transfer Protocol
+A request for a specific web page will be made and the response will be compared to the
+expected result. The returned page must match the expected content for points to be awarded.
+
+## HTTPS
+
+HTTPS - Hypertext Transfer Protocol Secure
+A request for a specific web page will be made over SSL. Similarly to HTTP, the response will
+compared to the expected value.
+
+## DNS 
+
+DNS - Domain Name System
+DNS lookups will be performed against the team’s DNS server. Each successfully served request
+will be awarded points.
+
+## LDAP 
+
+LDAP - Lightweight Directory Access Protocol
+An authenticated query to the Active Directory LDAP service will be performed.
+
+## FTP 
+
+FTP - File Transfer Protocol
+A connection to the server will be made with a specified user, a file will be retrieved, and its
+contents will be checked against an expected value.
+
+## SMB 
+
+SMB - Server Message Block
+A specified user will attempt to connect to and read a designated file from the remote host.
+This file will then be hashed and compared against the expected value.
+
+## WinRM
+
+WinRM - Windows Remote Management
+A WinRM session will be created with specified credentials and a command will be executed.
+
+## NFS 
+
+NFS - Network File System
+The scoring script will connect to the NFS service and attempt to write to a file. It will then
+attempt to log in again and see if the file exists.
+
+## MySQL
+
+MySQL (Database)
+A connection to the database will be made with a specified user and a query will be run. The
+output of the query will be compared to the expected stored value.
+
+## RDP 
+
+RDP - Remote Desktop
+A specified user will attempt to log in via RDP to the service. If a desktop appears, the check will
+be successful
+
+## PostgreSQL
+
+PostgreSQL (Database)
+Similar to the MySQL check, a connection to the database will be made with a specified user
+and a query will be run.
+
+## Elasticsearch 
+
+Elasticsearch
+A record will be inserted using the Elasticsearch HTTP API and a request will be made to verify
+that the newly created record exists.
